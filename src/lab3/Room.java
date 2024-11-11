@@ -1,7 +1,12 @@
 package lab3;
+import java.util.HashMap;
+
 
 public class Room {
-	private String description;
+	
+	private HashMap<String, Item> item = new HashMap<String, Item>();
+	
+	private String object;
 	private Room east;
 	private Room west;
 	private Room north;
@@ -10,26 +15,25 @@ public class Room {
 	private Room down;
 	
 	public Room(String u) {
-		description = u;
+		object = u;
 	}	//closes room
 	
-	private Item item;
-	private Item p;
-	public Item getItem() {
-		return item;
+	
+	public Item getItem(String i) {
+		return item.get(i);
 	}
-	public void setItem(Item i) {
-		item = i;
+	public void setItem(String i, Item p) {
+		item.put(i,p);
 	}
-	public Item takeItem() {
-		p = item;
-		item = null;
-		return p;
-	}
-	public void addItem(Item i) {
-		item = i;
+	public void addItem(String i, Item p) {
+		item.put(i, p);
 		
 	}
+	public void removeItem(String i) {
+		item.remove(i);
+	}
+	
+	
 	public Room getExit(char dir) {
 		if (dir == 'e') {
 			return east;
@@ -74,7 +78,7 @@ public class Room {
 		}
 	}//closes addexit
 		public String toString() {
-			return description;
+			return object;
 		}
 		
 }

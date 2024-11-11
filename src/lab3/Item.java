@@ -1,14 +1,12 @@
 package lab3;
 
-public class Item {
+public class Item extends game {
 	private String object;
 	private String name;
 
-	public Item(String o, String n) {
+	public Item(String n, String o) {
 		object = o;
 		name = n;
-		getname();
-		getobject();
 		}
 	public String getobject() {
 		return object; 
@@ -28,7 +26,12 @@ public class Item {
 			
 		}
 	public String toString() {
-		return object  ;
+		return name;
 	}
-	
+	public void open() {
+		game.print("you cannot open that");
+	}
+	public void use() {
+		game.print("you cannot use that");
+	}
 }
