@@ -6,6 +6,9 @@ public class Room {
 	
 	private HashMap<String, Item> item = new HashMap<String, Item>();
 	
+	
+	private boolean lock;
+	private String name;
 	private String object;
 	private Room east;
 	private Room west;
@@ -14,9 +17,26 @@ public class Room {
 	private Room up;
 	private Room down;
 	
-	public Room(String u) {
+	public Room(String n, String u) {
 		object = u;
+		name = n;
 	}	//closes room
+	
+	public boolean getlock() {
+		return lock;
+	}
+	
+	public void setlock(Boolean lock) {
+		this.lock = lock;
+	}
+	
+	public String getname() {
+		return name;
+	}
+	
+	public void setname(String name) {
+		this.name = name;
+	}
 	
 	
 	public Item getItem(String i) {
@@ -32,8 +52,7 @@ public class Room {
 	public void removeItem(String i) {
 		item.remove(i);
 	}
-	
-	
+
 	public Room getExit(char dir) {
 		if (dir == 'e') {
 			return east;

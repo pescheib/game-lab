@@ -1,8 +1,8 @@
 package lab3;
 
 public class combination extends Item {
-	public combination(String name, String description) {
-		super("combination", "combo for safe");
+	public combination(String name1, String description1) {
+		super(name1, description1);
 		
 	}
 	public void use() {

@@ -2,7 +2,7 @@ package lab3;
 
 public class safe extends Item{
 	public safe(String name, String description) {
-		super("Safe", "small in corner with spin comboination");
+		super(name, description);
 		
 	}
 	public void open() {
@@ -12,7 +12,7 @@ public class safe extends Item{
 		else {
 			game.print("use combinaion on safe to find diamond");
 			Item diamond = new Item("diamond","big and expensive");
-			inventory.add(diamond);
+			game.inventory.add(diamond);
 		}
 		
 	}
