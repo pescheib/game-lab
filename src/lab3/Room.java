@@ -1,11 +1,12 @@
 package lab3;
 import java.util.HashMap;
+import java.io.Serializable;
 
 
-public class Room {
+public class Room implements Serializable{
 	
 	private HashMap<String, Item> item = new HashMap<String, Item>();
-	
+	private HashMap<String, NPC> NPCMap= new HashMap<>();
 	
 	private boolean lock;
 	private String name;
@@ -51,6 +52,18 @@ public class Room {
 	}
 	public void removeItem(String i) {
 		item.remove(i);
+	}
+	
+	public void setNPC(String name, NPC i) {
+		NPCMap.put(name, i);
+	}
+	
+	public NPC getNPC(String name) {
+		return NPCMap.get(name);
+	}
+	
+	public void removeNPC(String name) {
+		NPCMap.remove(name);
 	}
 
 	public Room getExit(char dir) {
@@ -98,7 +111,18 @@ public class Room {
 	}//closes addexit
 		public String toString() {
 			return object;
+	}
+
+		public static void put(String name2, String description) {
 		}
+
 		
+
+		public void addNPC(String name, NPC i) {
+			// TODO Auto-generated method stub
+			NPCMap.put(name, i);
+		
+		}
+	
 }
 	

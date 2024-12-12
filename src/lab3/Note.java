@@ -7,6 +7,6 @@ public class Note extends Item{
 	
 	@Override
 	public void use() {
-		System.out.println("The key unlocks the surgery room.");
+		System.out.println("The key unlocks the surgery room. There might be a surprise in there");
 	}
 }

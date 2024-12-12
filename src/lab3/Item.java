@@ -1,6 +1,8 @@
 package lab3;
+import java.io.Serializable;
 
-public class Item extends game {
+
+public class Item extends game implements Serializable {
 	private String object;
 	private String name;
 

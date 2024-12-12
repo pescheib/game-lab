@@ -2,7 +2,7 @@ package lab3;
 
 public class combination extends Item {
 	public combination(String name1, String description1) {
-		super(name1, description1);
+		super("combination", "numbers on spinning dial");
 		
 	}
 	public void use() {
