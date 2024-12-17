@@ -1,0 +1,26 @@
+FrontDoor
+You are in the hotel's lobby.
+#
+#
+Cafe
+You are in the cafe.
+#
+#
+Surgery
+You are in the procedure room.
+#
+#
+Wash
+You are in the wash room.
+#
+#
+Rehab
+You are in the rehabilitation room.
+#
+#
+Radiation
+You are in the X-Ray room.
+#
+#
+Emergency
+You are in the emergency room.
